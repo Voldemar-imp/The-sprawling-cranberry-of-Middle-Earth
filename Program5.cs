@@ -160,7 +160,7 @@ namespace password
                         {
                             heroDamage = random.Next(heroDamageMin, heroDamageMax);
                             heroBattelMessage = heroName + " дыхнул перегаром на " + enemyName + 
-                                " и нанес " + heroDamage + " урона";
+                                " и нанес " + heroDamage + " урона.";
                         }
                         break;
                     case "2":
@@ -170,7 +170,7 @@ namespace password
                             bottelCount--;
                             heroDamageModifierRound = heroDamageModifier;
                             heroBattelMessage = heroName + " накатил пару стопарей и стал более опасным \n " +
-                                "на " + heroDamageModifierRound + " хода (- 1 бутылка)";
+                                "на " + heroDamageModifierRound + " хода (- 1 бутылка).";
                         }
                         else 
                         {
@@ -187,7 +187,7 @@ namespace password
                                 "Который впаривает Оркам-пионерам ваучеры. \n" +
                                 "Обманутые орки устраивают дебош в своем лагере. " +
                                 "Нанося, тем самым, делу революции " + ollOrksDamage + " урона. \n" +
-                                "После чего расходятся по домам";
+                                "После чего расходятся по домам.";
                         }
                         else 
                         {
@@ -195,7 +195,7 @@ namespace password
                             heroBattelMessage = heroName + " призывает рыжего эльфа Чубайласа. " +
                                 "Не найдя кому можно впанить свои ваучеры, " +
                                 "Чубайлас зебирает у героя бутылку водки. \n" +
-                                "После чего печально удалятся в лес, чтобы пьянствовать в одиночестве (- 1 бутылка)";
+                                "После чего печально удалятся в лес, чтобы пьянствовать в одиночестве (- 1 бутылка).";
                         }
                         break;
                     case "4":
@@ -208,13 +208,13 @@ namespace password
                             heroBattelMessage = heroName + " устраивает зажигательный танец, " +
                                 "поднимая настроение себе и окружающим.\n" +
                                 "После выступления гереой чувствует " +
-                                "себе значительно лучше и восстанавливает " + heroDanseHeal + " здоровья";
+                                "себе значительно лучше и восстанавливает " + heroDanseHeal + " здоровья.";
                         }
                         else 
                         {
                             heroBattelMessage = heroName + " начинает напевать: \n" +
                                 "Женщина, не танцую, Женщина, я не танцую \n" +
-                                "Никого я не рисую. Не умею, не танцую. \n\n Ничего не происходит";
+                                "Никого я не рисую. Не умею, не танцую. \n\n Ничего не происходит.";
                         }
                         break;
                 }
@@ -234,7 +234,7 @@ namespace password
                     heroHealth -= oneOrkDamage;
                     Console.SetCursorPosition(cursorPositionWidth, cursorPositionHeight++);
                     Console.WriteLine("Орков всего {0}. Орки отбирают у героя {0}  бутылок водки." +
-                        " Один из орков дает в глаз герою на {1} урона", orksCount, oneOrkDamage);
+                        " Один из орков дает в глаз герою на {1} урона.", orksCount, oneOrkDamage);
                 }
                 else if (orksCount != 0 && bottelCount <= orksCount && bottelCount >=1)
                 {
@@ -243,7 +243,7 @@ namespace password
                     heroHealth -= ollOrksDamage; 
                     Console.WriteLine("Орков всего {0}. Орки отбирают у героя " +
                         "все оставшиеся бутылки водки. После чего избивают его, " +
-                        "нанося {1} урона", orksCount, ollOrksDamage);
+                        "нанося {1} урона.", orksCount, ollOrksDamage);
                 }
                 else if (orksCount != 0 && bottelCount <= 0)
                 {
@@ -251,20 +251,20 @@ namespace password
                     ollOrksDamage = orksCount * oneOrkDamage;
                     heroHealth -= ollOrksDamage;
                     Console.WriteLine("Орков всего {0}. Орки, не найдя у героя бутылок водки," +
-                        " избивают его, нанося {1} урона", orksCount, ollOrksDamage);
+                        " избивают его, нанося {1} урона.", orksCount, ollOrksDamage);
                 }
 
                 orksSummon = random.Next(orksSummonMin, orksSummonMax + 1);
                 orksCount += orksSummon;
                 Console.SetCursorPosition(cursorPositionWidth, cursorPositionHeight++);
-                Console.WriteLine (enemyName + " призывает ещё " + orksSummon + " Орков-пионеров");
+                Console.WriteLine (enemyName + " призывает ещё " + orksSummon + " Орков-пионеров.");
                
                 if (bottelCount <= 0 && heroDamageModifierRound <=0)
                 {
                     bottelCount = 0;
                     heroHealth -= outOfBottlesDamage;
                     Console.SetCursorPosition(cursorPositionWidth, cursorPositionHeight++);
-                    Console.WriteLine("Герой страдает от сушняка и получает {0} урона", outOfBottlesDamage);
+                    Console.WriteLine("Герой страдает от сушняка и получает {0} урона.", outOfBottlesDamage);
                 }
                 else if (bottelCount <= 0) 
                 { 
@@ -285,7 +285,7 @@ namespace password
                     cursorPositionWidth = windowWidth/4;
                     cursorPositionHeight = windowHeight / 2 -1;
                     Console.SetCursorPosition(cursorPositionWidth, cursorPositionHeight++);
-                    Console.WriteLine("Оба противника {0} и {1} пали в жестокой борьбе", heroName, enemyName);
+                    Console.WriteLine("Оба противника {0} и {1} пали в жестокой борьбе.", heroName, enemyName);
                     Console.SetCursorPosition(cursorPositionWidth, cursorPositionHeight++);
                     Console.WriteLine("В Средиземье воцарилась анархия!");
                 }
