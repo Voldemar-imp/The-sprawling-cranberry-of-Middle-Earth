@@ -30,7 +30,7 @@ namespace password
             int heroDamageModifierRound = 0;
             Random random = new Random();            
             int heroHealth = 1000;
-            int heroDanseHeal = 100;
+            int heroDanseHeal = 200;
             int enemyHealth = 1000;
             int bottelCount = 20;
             int outOfBottlesDamage = 50;
