@@ -182,6 +182,7 @@ namespace password
                         if (orksCount != 0)
                         {                            
                             ollOrksDamage = orksCount * oneOrkDamage;
+                            heroDamage = ollOrksDamage;
                             orksCount = 0;
                             heroBattelMessage = heroName + " призывает рыжего эльфа Чубайласа. " +
                                 "Который впаривает Оркам-пионерам ваучеры. \n" +
